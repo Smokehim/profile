@@ -31,84 +31,90 @@ export function Contact() {
 
         <div className="flex justify-center">
           {/* Contact Information */}
-          <div className="space-y-8 grid md:grid-rows-4 max-w-6xl w-full">
+          <div className="space-y-12 max-w-6xl w-full">
             <div>
-              <h3 className="text-white text-2xl mb-6 text-center">Contact Information</h3>
+              <h3 className="text-white text-3xl mb-10 text-center font-bold">Connect With Me</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-[#1e293b] p-4 rounded-lg flex items-center gap-3">
-                  <div className="w-14 h-14 bg-[#0f172a] rounded-lg flex items-center justify-center text-[#3b82f6] flex-shrink-0">
+                <div className="glass-card glass-card-hover p-6 rounded-2xl flex items-center gap-4">
+                  <div className="w-14 h-14 bg-[#3b82f6]/10 rounded-xl flex items-center justify-center text-[#3b82f6] flex-shrink-0">
                     <Phone size={24} />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[#94a3b8] text-xs">Phone</p>
-                    <a href="tel:+260969591009" className="text-[#3b82f6] hover:text-[#60a5fa] transition-colors text-xs">
+                    <p className="text-[#94a3b8] text-xs uppercase tracking-widest font-bold mb-1">Phone</p>
+                    <a href="tel:+260969591009" className="text-white hover:text-[#3b82f6] transition-colors text-sm font-semibold truncate block">
                       +260 969 591 009
                     </a>
                   </div>
                 </div>
 
-                <div className="bg-[#1e293b] p-4 rounded-lg flex items-center gap-3">
-                  <div className="w-14 h-14 bg-[#0f172a] rounded-lg flex items-center justify-center text-[#3b82f6] flex-shrink-0">
+                <div className="glass-card glass-card-hover p-6 rounded-2xl flex items-center gap-4">
+                  <div className="w-14 h-14 bg-[#3b82f6]/10 rounded-xl flex items-center justify-center text-[#3b82f6] flex-shrink-0">
                     <Mail size={24} />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[#94a3b8] text-xs">Email</p>
-                    <a href="mailto:mwambajason2@gmail.com" className="text-[#3b82f6] hover:text-[#60a5fa] transition-colors text-xs break-words">
+                    <p className="text-[#94a3b8] text-xs uppercase tracking-widest font-bold mb-1">Email</p>
+                    <a href="mailto:mwambajason2@gmail.com" className="text-white hover:text-[#3b82f6] transition-colors text-sm font-semibold truncate block">
                       mwambajason2@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="bg-[#1e293b] p-4 rounded-lg flex items-center gap-3">
-                  <div className="w-14 h-14 bg-[#0f172a] rounded-lg flex items-center justify-center text-[#3b82f6] flex-shrink-0">
+                <div className="glass-card glass-card-hover p-6 rounded-2xl flex items-center gap-4">
+                  <div className="w-14 h-14 bg-[#3b82f6]/10 rounded-xl flex items-center justify-center text-[#3b82f6] flex-shrink-0">
                     <MessageCircle size={24} />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[#94a3b8] text-xs">WhatsApp</p>
+                    <p className="text-[#94a3b8] text-xs uppercase tracking-widest font-bold mb-1">WhatsApp</p>
                     <button
                       onClick={openWhatsApp}
-                      className="text-[#3b82f6] hover:text-[#60a5fa] transition-colors text-xs"
+                      className="text-white hover:text-[#3b82f6] transition-colors text-sm font-semibold text-left truncate block"
                     >
                       Chat on WhatsApp
                     </button>
                   </div>
                 </div>
 
-                <div className="bg-[#1e293b] p-4 rounded-lg flex items-center gap-3">
-                  <div className="w-14 h-14 bg-[#0f172a] rounded-lg flex items-center justify-center text-[#3b82f6] flex-shrink-0">
+                <div className="glass-card glass-card-hover p-6 rounded-2xl flex items-center gap-4">
+                  <div className="w-14 h-14 bg-[#3b82f6]/10 rounded-xl flex items-center justify-center text-[#3b82f6] flex-shrink-0">
                     <Github size={24} />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[#94a3b8] text-xs">GitHub</p>
+                    <p className="text-[#94a3b8] text-xs uppercase tracking-widest font-bold mb-1">GitHub</p>
                     <a
                       href="https://github.com/dashboard"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#3b82f6] hover:text-[#60a5fa] transition-colors text-xs"
+                      className="text-white hover:text-[#3b82f6] transition-colors text-sm font-semibold truncate block"
                     >
-                      View Profile
+                      View Projects
                     </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-[#1e293b] p-6 rounded-lg">
-              <h4 className="text-white text-lg mb-4">Why Work With Me?</h4>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3 text-[#94a3b8]">
-                  <div className="w-2 h-2 bg-[#3b82f6] rounded-full mt-2"></div>
-                  <span>Professional and reliable service</span>
-                </li>
-                <li className="flex items-start gap-3 text-[#94a3b8]">
-                  <div className="w-2 h-2 bg-[#3b82f6] rounded-full mt-2"></div>
-                  <span>Quick response and turnaround time</span>
-                </li>
-                <li className="flex items-start gap-3 text-[#94a3b8]">
-                  <div className="w-2 h-2 bg-[#3b82f6] rounded-full mt-2"></div>
-                  <span>Quality work at competitive prices</span>
-                </li>
-              </ul>
+            <div className="glass-card p-10 rounded-3xl border-t border-white/10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-12 text-[#3b82f6]/5 pointer-events-none">
+                <Send size={120} className="rotate-12 group-hover:rotate-0 transition-transform duration-700" />
+              </div>
+              <h4 className="text-white text-2xl mb-8 font-bold">Why Work With Me?</h4>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="space-y-4">
+                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full"></div>
+                  <h5 className="text-white font-bold">Professionalism</h5>
+                  <p className="text-[#94a3b8] text-sm leading-relaxed">Dedicated to clear communication and delivering results that exceed expectations every single time.</p>
+                </div>
+                <div className="space-y-4">
+                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full"></div>
+                  <h5 className="text-white font-bold">Reliability</h5>
+                  <p className="text-[#94a3b8] text-sm leading-relaxed">Your projects and device needs are my priority. I ensure fast turnaround times without compromising quality.</p>
+                </div>
+                <div className="space-y-4">
+                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full"></div>
+                  <h5 className="text-white font-bold">Expertise</h5>
+                  <p className="text-[#94a3b8] text-sm leading-relaxed">A unique blend of tech proficiency, creative design eye, and deep knowledge of the smartphone market.</p>
+                </div>
+              </div>
             </div>
           </div>   
         </div>

@@ -28,32 +28,33 @@ export function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
-              key={index}
-              className="bg-[#1e293b] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all group"
+              key={project.id}
+              className="glass-card glass-card-hover rounded-2xl overflow-hidden group flex flex-col"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
                 <ImageWithFallback
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60"></div>
               </div>
-              <div className="p-6">
-                <h3 className="text-white text-xl mb-3">{project.title}</h3>
-                <p className="text-[#94a3b8] mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-white text-2xl mb-4 font-bold group-hover:text-[#3b82f6] transition-colors">{project.title}</h3>
+                <p className="text-[#94a3b8] mb-6 leading-relaxed line-clamp-3">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 bg-[#0f172a] text-[#3b82f6] text-sm rounded-full"
+                      className="px-3 py-1 bg-[#3b82f6]/10 text-[#3b82f6] text-xs font-semibold rounded-full border border-[#3b82f6]/20"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <button className="flex items-center gap-2 text-[#3b82f6] hover:text-[#60a5fa] transition-colors">
-                  View Project
-                  <ExternalLink size={16} />
+                <button className="mt-auto flex items-center gap-2 text-[#3b82f6] hover:text-[#60a5fa] transition-all font-bold group/link">
+                  View Project Details
+                  <ExternalLink size={18} className="group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
                 </button>
               </div>
             </div>

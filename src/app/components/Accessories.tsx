@@ -83,27 +83,31 @@ export function Accessories() {
           {displayedAccessories.map((accessory) => (
             <div
               key={accessory.id}
-              className="bg-[#1e293b] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all"
+              className="glass-card glass-card-hover rounded-2xl overflow-hidden group flex flex-col"
             >
-              <div className="relative h-48 bg-[#0f172a]">
+              <div className="relative h-48 bg-[#0f172a]/50 overflow-hidden">
                 <ImageWithFallback
                   src={accessory.image}
                   alt={accessory.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute top-3 left-3">
+                  <span className="px-3 py-1 bg-white/10 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider rounded-full border border-white/10 shadow-lg">
+                    {accessory.category}
+                  </span>
+                </div>
               </div>
-              <div className="p-4 flex flex-col h-full">
-                <p className="text-[#3b82f6] text-xs mb-1">{accessory.category}</p>
-                <h3 className="text-white mb-2 font-semibold">{accessory.name}</h3>
+              <div className="p-5 flex flex-col flex-grow">
+                <h3 className="text-white mb-2 font-semibold group-hover:text-[#3b82f6] transition-colors line-clamp-1">{accessory.name}</h3>
                 <p className="text-[#94a3b8] text-sm mb-4 line-clamp-2 flex-grow">{accessory.description}</p>
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#334155]">
-                  <span className="text-white text-lg font-bold">{accessory.price}</span>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5 gap-4">
+                  <span className="text-white text-xl font-bold flex-shrink-0">{accessory.price}</span>
                   <button
                     onClick={() => handleContact(accessory.name)}
-                    className="px-3 py-2 bg-[#3b82f6] text-white rounded-lg hover:bg-[#2563eb] transition-colors flex items-center justify-center gap-2 text-sm"
+                    className="px-4 py-2 bg-[#3b82f6] text-white rounded-xl hover:bg-[#2563eb] transition-all hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] flex items-center justify-center gap-2 text-sm font-semibold whitespace-nowrap active:scale-95"
                   >
                     <MessageCircle size={16} />
-                    Buy
+                    Buy Now
                   </button>
                 </div>
               </div>

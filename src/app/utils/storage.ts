@@ -32,8 +32,64 @@ const defaultData = {
       description: "Quality phones and accessories at competitive prices"
     }
   ],
-  projects: [],
-  graphicDesigns: [],
+  projects: [
+    {
+      id: "proj1",
+      title: "Business Analytics Dashboard",
+      description: "A high-performance dashboard featuring real-time data visualization, custom reporting, and automated insights for enterprise businesses.",
+      image: "/images/portfolio/project_dashboard.png",
+      tags: ["Next.js", "TypeScript", "Chart.js", "Tailwind CSS"],
+      link: "#"
+    },
+    {
+      id: "proj2",
+      title: "Luxury E-commerce Platform",
+      description: "A premium shopping experience for high-end products, featuring a custom checkout flow, inventory management, and personalized recommendations.",
+      image: "/images/portfolio/project_ecommerce.png",
+      tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
+      link: "#"
+    },
+    {
+      id: "proj3",
+      title: "Creative SaaS Landing Page",
+      description: "A modern, conversion-focused landing page with glassmorphism effects, Lottie animations, and a responsive glass-style navigation.",
+      image: "/images/laptops/laptop_generic.jfif",
+      tags: ["Vite", "Framer Motion", "Three.js"],
+      link: "#"
+    }
+  ],
+  graphicDesigns: [
+    {
+      id: "gd1",
+      title: "Summer Music Festival Poster",
+      image: "/images/phones/huawei_p30pro.jfif" 
+    },
+    {
+      id: "gd2",
+      title: "Corporate Branding Identity",
+      image: "/images/accessories/blue_case.jfif"
+    },
+    {
+      id: "gd3",
+      title: "Modern Event Invitation",
+      image: "/images/phones/iphone17pro.jfif"
+    },
+    {
+      id: "gd4",
+      title: "Social Media Marketing Kit",
+      image: "/images/accessories/iphone_charger.jfif"
+    },
+    {
+      id: "gd5",
+      title: "Product Launch Flyer",
+      image: "/images/laptops/hp_elitebook.jfif"
+    },
+    {
+      id: "gd6",
+      title: "Luxury Watch Branding",
+      image: "/images/laptops/macbook_pro.jfif"
+    }
+  ],
   phones: [
     {
       id: "p1",

@@ -10,21 +10,42 @@ import { LaptopSales } from './LaptopSales';
 import { Accessories } from './Accessories';
 import { Contact } from './Contact';
 import { Footer } from './Footer';
+import { useEffect } from 'react';
 
 export function MainLayout() {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#0f172a]">
+    <div className="min-h-screen bg-[#0f172a] selection:bg-[#3b82f6]/30 selection:text-white">
       <Navbar />
       <Hero />
-      <About />
-      <Skills />
-      <Services />
-      <Projects />
-      <GraphicDesign />
-      <PhoneSales />
-      <LaptopSales />
-      <Accessories />
-      <Contact />
+      <div className="reveal"><About /></div>
+      <div className="reveal"><Skills /></div>
+      <div className="reveal"><Services /></div>
+      <div className="reveal"><Projects /></div>
+      <div className="reveal"><GraphicDesign /></div>
+      <div className="reveal"><PhoneSales /></div>
+      <div className="reveal"><LaptopSales /></div>
+      <div className="reveal"><Accessories /></div>
+      <div className="reveal"><Contact /></div>
       <Footer />
     </div>
   );

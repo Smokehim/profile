@@ -38,34 +38,38 @@ export function LaptopSales() {
           {displayedLaptops.map((laptop) => (
             <div
               key={laptop.id}
-              className="bg-[#1e293b] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all"
+              className="glass-card glass-card-hover rounded-2xl overflow-hidden group"
             >
-              <div className="relative h-64 bg-[#0f172a] flex items-center justify-center">
+              <div className="relative h-64 bg-[#0f172a]/50 flex items-center justify-center overflow-hidden">
                 <ImageWithFallback
                   src={laptop.image}
                   alt={laptop.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 bg-white/10 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded-full border border-white/10 shadow-lg">
+                    {laptop.brand}
+                  </span>
+                </div>
               </div>
               <div className="p-6">
-                <p className="text-[#3b82f6] text-sm mb-2">{laptop.brand}</p>
-                <h3 className="text-white text-xl mb-3">{laptop.name}</h3>
-                <ul className="space-y-2 mb-4">
+                <h3 className="text-white text-xl mb-4 font-semibold group-hover:text-[#3b82f6] transition-colors line-clamp-1">{laptop.name}</h3>
+                <ul className="space-y-3 mb-6">
                   {laptop.specs.map((spec, index) => (
-                    <li key={index} className="text-[#94a3b8] text-sm flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-[#3b82f6] rounded-full"></div>
+                    <li key={index} className="text-[#94a3b8] text-sm flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-[#3b82f6] rounded-full shadow-[0_0_8px_rgba(59,130,246,0.5)]"></div>
                       {spec}
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between pt-4 border-t border-[#334155]">
-                  <span className="text-white text-2xl">{laptop.price}</span>
+                <div className="flex items-center justify-between pt-5 border-t border-white/5 gap-4">
+                  <span className="text-white text-xl font-bold flex-shrink-0">{laptop.price}</span>
                   <button
                     onClick={() => handleContact(laptop.name)}
-                    className="px-4 py-2 bg-[#3b82f6] text-white rounded-lg hover:bg-[#2563eb] transition-colors flex items-center gap-2"
+                    className="px-4 py-2 bg-[#3b82f6] text-white rounded-xl hover:bg-[#2563eb] transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center justify-center gap-2 text-sm font-semibold whitespace-nowrap active:scale-95"
                   >
                     <MessageCircle size={18} />
-                    Contact to Buy
+                    Buy Now
                   </button>
                 </div>
               </div>

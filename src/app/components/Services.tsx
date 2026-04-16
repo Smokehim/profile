@@ -31,16 +31,23 @@ export function Services() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <div
-              key={service.id}
-              className="bg-[#1e293b] p-8 rounded-lg hover:bg-[#334155] transition-all group"
+              key={index}
+              className="glass-card glass-card-hover p-10 rounded-2xl group relative overflow-hidden"
             >
-              <div className="text-[#3b82f6] mb-6 group-hover:scale-110 transition-transform inline-block">
-                {getIcon(service.icon)}
+              <div className="absolute top-0 right-0 p-8 text-white/5 group-hover:text-[#3b82f6]/10 transition-colors">
+                <div className="scale-150 rotate-12">{getIcon(service.icon)}</div>
               </div>
-              <h3 className="text-white text-2xl mb-4">{service.title}</h3>
-              <p className="text-[#94a3b8]">{service.description}</p>
+              <div className="text-[#3b82f6] mb-8 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[#3b82f6]/10 rounded-2xl flex items-center justify-center">
+                  {getIcon(service.icon)}
+                </div>
+              </div>
+              <h3 className="text-white text-2xl mb-4 font-bold">{service.title}</h3>
+              <p className="text-[#94a3b8] text-lg leading-relaxed">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>

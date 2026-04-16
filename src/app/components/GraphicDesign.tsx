@@ -26,21 +26,24 @@ export function GraphicDesign() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {designs.map((design, index) => (
             <div
-              key={index}
-              className="group relative cursor-pointer overflow-hidden rounded-lg"
+              key={design.id}
+              className="group relative cursor-pointer overflow-hidden rounded-2xl glass-card glass-card-hover"
               onClick={() => setSelectedImage(design.image)}
             >
-              <ImageWithFallback
-                src={design.image}
-                alt={design.title}
-                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white text-lg">{design.title}</h3>
+              <div className="relative h-80 overflow-hidden">
+                <ImageWithFallback
+                  src={design.image}
+                  alt={design.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p className="text-[#3b82f6] text-xs font-bold uppercase tracking-widest mb-2">Design Piece</p>
+                    <h3 className="text-white text-xl font-bold">{design.title}</h3>
+                  </div>
                 </div>
               </div>
             </div>

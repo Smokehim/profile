@@ -51,13 +51,15 @@ export function Skills() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-[#1e293b] p-6 rounded-lg hover:bg-[#334155] transition-all hover:scale-105 group"
+              className="glass-card glass-card-hover p-8 rounded-2xl group text-center"
             >
-              <div className="text-[#3b82f6] mb-4 group-hover:scale-110 transition-transform">
-                {skill.icon}
+              <div className="text-[#3b82f6] mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="p-4 bg-[#3b82f6]/10 rounded-2xl">
+                  {skill.icon}
+                </div>
               </div>
-              <h3 className="text-white text-lg mb-2">{skill.name}</h3>
-              <p className="text-[#94a3b8] text-sm">{skill.description}</p>
+              <h3 className="text-white text-xl mb-3 font-bold">{skill.name}</h3>
+              <p className="text-[#94a3b8] text-sm leading-relaxed">{skill.description}</p>
             </div>
           ))}
         </div>
