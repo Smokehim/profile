@@ -47,7 +47,7 @@ export function Skills() {
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6">
           {skills.map((skill, index) => (
             <div
               key={index}
