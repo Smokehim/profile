@@ -13,13 +13,13 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/90 backdrop-blur-sm border-b border-[#1e293b]">
-      <div className="max-w-[1440px] mx-auto px-20">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/90 md:bg-[#0f172a]/80 backdrop-blur-md md:backdrop-blur-lg border-b border-white/5 shadow-2xl">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <button
             onClick={() => scrollToSection('home')}
-            className="text-2xl text-white hover:text-[#3b82f6] transition-colors"
+            className="text-xl md:text-2xl font-bold text-white hover:text-[#3b82f6] transition-all active:scale-95"
           >
             Jason Mwamba
           </button>

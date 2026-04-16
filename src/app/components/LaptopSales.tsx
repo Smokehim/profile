@@ -24,8 +24,8 @@ export function LaptopSales() {
   const displayedLaptops = showAll ? laptops : laptops.slice(0, 4);
 
   return (
-    <section className="py-20 bg-[#0f172a]">
-      <div className="max-w-[1440px] mx-auto px-20">
+    <section id="work" className="py-20 bg-[#0f172a]">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl text-white mb-4">Laptop Sales</h2>
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
@@ -34,7 +34,7 @@ export function LaptopSales() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {displayedLaptops.map((laptop) => (
             <div
               key={laptop.id}

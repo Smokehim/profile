@@ -32,7 +32,7 @@ export function PhoneSales() {
 
   return (
     <section className="py-20 bg-[#0f172a]">
-      <div className="max-w-[1440px] mx-auto px-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl text-white mb-4">Phone Sales</h2>
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
@@ -42,7 +42,7 @@ export function PhoneSales() {
         </div>
 
         {/* Category Filter */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+        <div className="flex gap-4 mb-12 overflow-x-auto pb-4 no-scrollbar">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -50,7 +50,7 @@ export function PhoneSales() {
                 setSelectedCategory(cat);
                 setShowAll(false); // Reset showAll when category changes
               }}
-              className={`px-6 py-3 rounded-lg transition-colors ${
+              className={`px-6 py-3 rounded-lg transition-colors whitespace-nowrap ${
                 selectedCategory === cat
                   ? 'bg-[#3b82f6] text-white'
                   : 'bg-[#1e293b] text-[#94a3b8] hover:bg-[#334155]'
@@ -61,7 +61,7 @@ export function PhoneSales() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {displayedPhones.map((phone) => (
             <div
               key={phone.id}

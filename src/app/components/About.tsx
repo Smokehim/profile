@@ -15,13 +15,13 @@ export function About() {
   return (
     <section id="about" className="py-24 bg-[#0f172a] relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-64 h-64 bg-[#3b82f6]/5 rounded-full blur-[100px]"></div>
-      <div className="max-w-[1440px] mx-auto px-20 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl text-white mb-4 font-bold">About Me</h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="order-2 md:order-1 relative group">
             <div className="absolute -inset-4 bg-gradient-to-tr from-[#3b82f6] to-[#60a5fa] rounded-3xl blur-2xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
@@ -29,15 +29,15 @@ export function About() {
               <ImageWithFallback
                 src={profile.aboutImage}
                 alt="Workspace"
-                className="w-full h-[500px] object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
               />
             </div>
           </div>
 
           {/* Text */}
-          <div className="space-y-8 order-1 md:order-2">
+          <div className="space-y-6 md:space-y-8 order-1 md:order-2 text-center md:text-left">
             <div className="space-y-6">
-              <p className="text-white text-2xl font-light leading-relaxed">
+              <p className="text-white text-xl md:text-2xl font-light leading-relaxed">
                 I'm a passionate <span className="text-[#3b82f6] font-semibold">Full-Stack Developer</span> with expertise in building modern, 
                 scalable web applications.
               </p>

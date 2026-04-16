@@ -17,16 +17,16 @@ export function GraphicDesign() {
 
   return (
     <section className="py-20 bg-[#0f172a]">
-      <div className="max-w-[1440px] mx-auto px-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl text-white mb-4">Graphic Design Gallery</h2>
+          <h2 className="text-4xl text-white mb-4 font-bold">Graphic Design Gallery</h2>
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
           <p className="text-[#94a3b8] mt-4 max-w-2xl mx-auto">
             Explore my collection of posters and event cards
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {designs.map((design, index) => (
             <div
               key={design.id}

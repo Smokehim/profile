@@ -41,20 +41,20 @@ export function Skills() {
 
   return (
     <section className="py-20 bg-[#0f172a]">
-      <div className="max-w-[1440px] mx-auto px-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl text-white mb-4">Skills & Technologies</h2>
+          <h2 className="text-4xl text-white mb-4 font-bold">Skills & Technologies</h2>
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="glass-card glass-card-hover p-8 rounded-2xl group text-center"
+              className="glass-card glass-card-hover p-5 md:p-8 rounded-2xl group text-center"
             >
-              <div className="text-[#3b82f6] mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                <div className="p-4 bg-[#3b82f6]/10 rounded-2xl">
+              <div className="text-[#3b82f6] mb-4 md:mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="p-3 md:p-4 bg-[#3b82f6]/10 rounded-2xl">
                   {skill.icon}
                 </div>
               </div>

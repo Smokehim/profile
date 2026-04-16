@@ -20,21 +20,21 @@ export function Services() {
   };
 
   return (
-    <section className="py-20 bg-[#0f172a]">
-      <div className="max-w-[1440px] mx-auto px-20">
+    <section id="services" className="py-20 bg-[#0f172a]">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl text-white mb-4">Services</h2>
+          <h2 className="text-4xl text-white mb-4 font-bold">My Services</h2>
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
           <p className="text-[#94a3b8] mt-4 max-w-2xl mx-auto">
             I offer a unique combination of technical and creative services to help bring your ideas to life
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="glass-card glass-card-hover p-10 rounded-2xl group relative overflow-hidden"
+              className="glass-card glass-card-hover p-6 md:p-10 rounded-2xl group relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-8 text-white/5 group-hover:text-[#3b82f6]/10 transition-colors">
                 <div className="scale-150 rotate-12">{getIcon(service.icon)}</div>

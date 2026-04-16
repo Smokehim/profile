@@ -20,9 +20,9 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 bg-[#0f172a]">
-      <div className="max-w-[1440px] mx-auto px-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl text-white mb-4">Get In Touch</h2>
+          <h2 className="text-4xl text-white mb-4 font-bold">Get In Touch</h2>
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
           <p className="text-[#94a3b8] mt-4 max-w-2xl mx-auto">
             Have a project in mind or want to buy a phone? Let's talk!
@@ -93,24 +93,24 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="glass-card p-10 rounded-3xl border-t border-white/10 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-12 text-[#3b82f6]/5 pointer-events-none">
-                <Send size={120} className="rotate-12 group-hover:rotate-0 transition-transform duration-700" />
+            <div className="glass-card p-6 md:p-10 rounded-3xl border-t border-white/10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-8 md:p-12 text-[#3b82f6]/5 pointer-events-none">
+                <Send size={120} className="w-16 h-16 md:w-32 md:h-32 rotate-12 group-hover:rotate-0 transition-transform duration-700" />
               </div>
-              <h4 className="text-white text-2xl mb-8 font-bold">Why Work With Me?</h4>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="space-y-4">
-                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full"></div>
+              <h4 className="text-white text-xl md:text-2xl mb-8 font-bold text-center md:text-left">Why Work With Me?</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="space-y-4 text-center md:text-left">
+                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full mx-auto md:mx-0"></div>
                   <h5 className="text-white font-bold">Professionalism</h5>
                   <p className="text-[#94a3b8] text-sm leading-relaxed">Dedicated to clear communication and delivering results that exceed expectations every single time.</p>
                 </div>
-                <div className="space-y-4">
-                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full"></div>
+                <div className="space-y-4 text-center md:text-left">
+                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full mx-auto md:mx-0"></div>
                   <h5 className="text-white font-bold">Reliability</h5>
                   <p className="text-[#94a3b8] text-sm leading-relaxed">Your projects and device needs are my priority. I ensure fast turnaround times without compromising quality.</p>
                 </div>
-                <div className="space-y-4">
-                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full"></div>
+                <div className="space-y-4 text-center md:text-left">
+                  <div className="w-10 h-1 bg-[#3b82f6] rounded-full mx-auto md:mx-0"></div>
                   <h5 className="text-white font-bold">Expertise</h5>
                   <p className="text-[#94a3b8] text-sm leading-relaxed">A unique blend of tech proficiency, creative design eye, and deep knowledge of the smartphone market.</p>
                 </div>

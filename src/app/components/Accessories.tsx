@@ -29,8 +29,8 @@ export function Accessories() {
   }
 
   return (
-    <section className="py-20 bg-[#0f172a]">
-      <div className="max-w-[1440px] mx-auto px-20">
+    <section id="accessories" className="py-20 bg-[#0f172a]">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl text-white mb-4">Accessories</h2>
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
@@ -40,13 +40,13 @@ export function Accessories() {
         </div>
 
         {/* Category Filter */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex gap-4 mb-12 overflow-x-auto pb-4 no-scrollbar">
           <button
             onClick={() => {
               setSelectedCategory('all');
               setShowAll(false);
             }}
-            className={`px-6 py-3 rounded-lg transition-colors ${selectedCategory === 'all'
+            className={`px-6 py-3 rounded-lg transition-colors whitespace-nowrap ${selectedCategory === 'all'
                 ? 'bg-[#3b82f6] text-white'
                 : 'bg-[#1e293b] text-[#94a3b8] hover:bg-[#334155]'
               }`}
@@ -58,7 +58,7 @@ export function Accessories() {
               setSelectedCategory('Phone Accessory');
               setShowAll(false);
             }}
-            className={`px-6 py-3 rounded-lg transition-colors ${selectedCategory === 'Phone Accessory'
+            className={`px-6 py-3 rounded-lg transition-colors whitespace-nowrap ${selectedCategory === 'Phone Accessory'
                 ? 'bg-[#3b82f6] text-white'
                 : 'bg-[#1e293b] text-[#94a3b8] hover:bg-[#334155]'
               }`}
@@ -70,7 +70,7 @@ export function Accessories() {
               setSelectedCategory('Laptop Accessory');
               setShowAll(false);
             }}
-            className={`px-6 py-3 rounded-lg transition-colors ${selectedCategory === 'Laptop Accessory'
+            className={`px-6 py-3 rounded-lg transition-colors whitespace-nowrap ${selectedCategory === 'Laptop Accessory'
                 ? 'bg-[#3b82f6] text-white'
                 : 'bg-[#1e293b] text-[#94a3b8] hover:bg-[#334155]'
               }`}
@@ -79,7 +79,7 @@ export function Accessories() {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {displayedAccessories.map((accessory) => (
             <div
               key={accessory.id}
