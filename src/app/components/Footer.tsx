@@ -1,5 +1,5 @@
 import { Facebook, FacebookIcon, Github, Linkedin, MessageCircle } from 'lucide-react';
-import { Link } from 'react-router';
+
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           <div className="text-center md:text-left">
             <h3 className="text-white text-xl mb-2">Jason Mwamba</h3>
             <p className="text-[#94a3b8]">
-              Full-Stack Developer | Graphic Designer | Phone Seller
+              Full-Stack Developer | Graphic Designer
             </p>
           </div>
 
@@ -51,12 +51,6 @@ export function Footer() {
           <p className="text-[#94a3b8] text-sm">
             © {new Date().getFullYear()} Jason Mwamba. All rights reserved.
           </p>
-          <Link 
-            to="/admin" 
-            className="text-[#94a3b8] hover:text-[#60a5fa] text-sm mt-2 inline-block transition-colors"
-          >
-            Smoke Panel
-          </Link>
         </div>
       </div>
     </footer>

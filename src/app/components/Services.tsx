@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Palette, Smartphone } from 'lucide-react';
+import { Code, Palette, Layout } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { storage, Service } from '../utils/storage';
 
@@ -14,7 +14,7 @@ export function Services() {
     const icons: Record<string, React.JSX.Element> = {
       Code: <Code size={40} />,
       Palette: <Palette size={40} />,
-      Smartphone: <Smartphone size={40} />,
+      Layout: <Layout size={40} />,
     };
     return icons[iconName] || <Code size={40} />;
   };

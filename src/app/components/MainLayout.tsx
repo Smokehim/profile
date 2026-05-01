@@ -5,9 +5,6 @@ import { Skills } from './Skills';
 import { Services } from './Services';
 import { Projects } from './Projects';
 import { GraphicDesign } from './GraphicDesign';
-import { PhoneSales } from './PhoneSales';
-import { LaptopSales } from './LaptopSales';
-import { Accessories } from './Accessories';
 import { Contact } from './Contact';
 import { Footer } from './Footer';
 import { useEffect } from 'react';
@@ -42,9 +39,6 @@ export function MainLayout() {
       <div className="reveal"><Services /></div>
       <div className="reveal"><Projects /></div>
       <div className="reveal"><GraphicDesign /></div>
-      <div className="reveal"><PhoneSales /></div>
-      <div className="reveal"><LaptopSales /></div>
-      <div className="reveal"><Accessories /></div>
       <div className="reveal"><Contact /></div>
       <Footer />
     </div>

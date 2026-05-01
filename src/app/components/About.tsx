@@ -48,7 +48,7 @@ export function About() {
               </p>
 
               <p className="text-[#94a3b8] text-lg leading-relaxed">
-                I also run a successful <span className="text-white font-medium">phone sales business</span>, helping customers find the perfect quality smartphone that fits their lifestyle and budget.
+                I'm also deeply interested in <span className="text-white font-medium">UI/UX Design</span>, ensuring that every digital product I build is not only functional but also intuitive and visually pleasing for the end user.
               </p>
             </div>
 
@@ -56,7 +56,7 @@ export function About() {
               {[
                 { title: 'Web Development', desc: 'Next.js, React, Node.js, MySQL', icon: 'Code' },
                 { title: 'Graphic Design', desc: 'Figma, Photoshop, Creative Branding', icon: 'Palette' },
-                { title: 'Phone Sales', desc: 'Premium Smartphone Retail & Support', icon: 'Smartphone' }
+                { title: 'UI/UX Design', desc: 'User Experience & Interface Architecture', icon: 'Layout' }
               ].map((item, i) => (
                 <div key={i} className="glass-card p-5 rounded-2xl flex items-center gap-5 group/item">
                   <div className="w-12 h-12 bg-[#3b82f6]/10 rounded-xl flex items-center justify-center text-[#3b82f6] group-hover/item:bg-[#3b82f6] group-hover/item:text-white transition-all duration-300">

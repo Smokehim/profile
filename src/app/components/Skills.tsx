@@ -47,7 +47,7 @@ export function Skills() {
           <div className="w-20 h-1 bg-[#3b82f6] mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -58,7 +58,7 @@ export function Skills() {
                   {skill.icon}
                 </div>
               </div>
-              <h3 className="text-white text-xl mb-3 font-bold">{skill.name}</h3>
+              <h3 className="text-white text-lg mb-3">{skill.name}</h3>
               <p className="text-[#94a3b8] text-sm leading-relaxed">{skill.description}</p>
             </div>
           ))}
