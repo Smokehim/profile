@@ -51,43 +51,48 @@ const defaultData = {
     },
     {
       id: "proj3",
-      title: "Creative SaaS Landing Page",
-      description: "A modern, conversion-focused landing page with glassmorphism effects, Lottie animations, and a responsive glass-style navigation.",
-      image: "/images/laptops/laptop_generic.jfif",
-      tags: ["Vite", "Framer Motion", "Three.js"],
+      title: "LawLink Platform",
+      description: "A comprehensive legal platform connecting lawyers with clients, featuring automated lawyer search, province-based filtering, and a dedicated admin dashboard for verification.",
+      image: "/images/portfolio/website_design.png",
+      tags: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS"],
       link: "#"
     }
   ],
   graphicDesigns: [
     {
       id: "gd1",
-      title: "Summer Music Festival Poster",
-      image: "/images/designs/design1.jpg"
+      title: "Music Poster Design",
+      image: "/images/designs/music_poster.png"
     },
     {
       id: "gd2",
-      title: "Corporate Branding Identity",
-      image: "/images/designs/design2.jpg"
+      title: "2025 Vision Graphic",
+      image: "/images/designs/design2.png"
     },
     {
       id: "gd3",
-      title: "Modern Event Invitation",
-      image: "/images/designs/design3.jpg"
+      title: "Overnight Event Flyer",
+      image: "/images/designs/overnight_event.png"
     },
     {
       id: "gd4",
-      title: "Social Media Marketing Kit",
-      image: "/images/designs/design4.jpg"
+      title: "In Living Design",
+      image: "/images/designs/in_living_design.png"
     },
     {
       id: "gd5",
-      title: "Product Launch Flyer",
-      image: "/images/designs/design5.jpg"
+      title: "Daily Bread Outreach",
+      image: "/images/designs/daily_bread.png"
     },
     {
       id: "gd6",
-      title: "Luxury Watch Branding",
-      image: "/images/designs/design6.jpg"
+      title: "Professional Resume Design",
+      image: "/images/designs/resume_design.png"
+    },
+    {
+      id: "gd7",
+      title: "Creative Text Composition",
+      image: "/images/designs/text_design.png"
     }
   ]
 };
